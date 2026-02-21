@@ -1,0 +1,57 @@
+{
+  "name": "rehype-table-align",
+  "version": "1.0.0",
+  "description": "rehype plugin to handle Markdown table alignment issues by converting align attributes to CSS styles",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest watch",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "prepack": "pnpm run build"
+  },
+  "keywords": [
+    "unified",
+    "rehype",
+    "rehype-plugin",
+    "plugin",
+    "html",
+    "ast",
+    "markdown",
+    "table",
+    "align",
+    "style"
+  ],
+  "author": "Chiahong Hong",
+  "license": "MIT",
+  "peerDependencies": {
+    "unified": "^11.0.0"
+  },
+  "dependencies": {
+    "unist-util-visit": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/hast": "^3.0.0",
+    "@types/node": "^24.0.0",
+    "@vitest/coverage-v8": "^4.0.0",
+    "prettier": "^3.8.0",
+    "rehype-stringify": "^10.0.0",
+    "remark-gfm": "^4.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.0.0",
+    "typescript": "^5.9.0",
+    "unified": "^11.0.0",
+    "vitest": "^4.0.0"
+  }
+}
