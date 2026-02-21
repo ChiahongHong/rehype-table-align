@@ -1,6 +1,6 @@
 {
   "name": "rehype-table-align",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "rehype plugin to handle Markdown table alignment issues by converting align attributes to CSS styles",
   "type": "module",
   "exports": {
