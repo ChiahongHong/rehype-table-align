@@ -96,9 +96,42 @@ Yields:
 </table>
 ```
 
+## Options
+
+`rehype-table-align` accepts an optional configuration object to customize its behavior.
+
+```ts
+import rehypeTableAlign, { type RehypeTableAlignOptions } from "rehype-table-align"
+
+const options: RehypeTableAlignOptions = {
+  method: "class",         // 'style' (default) or 'class'
+  classes: {
+    left: "text-left",     // default: 'left'
+    center: "text-center", // default: 'center'
+    right: "text-right",   // default: 'right'
+  }
+}
+
+processor.use(rehypeTableAlign, options)
+```
+
+### `method`
+- Type: `"style" | "class"`
+- Default: `"style"`
+
+Controls how the alignment is applied:
+- `"style"`: Uses inline CSS properties (e.g., `style="text-align: center;"`).
+- `"class"`: Uses CSS class names instead.
+
+### `classes`
+- Type: `{ left?: string; center?: string; right?: string }`
+- Default: `{ left: "left", center: "center", right: "right" }`
+
+Specifies the exact class names to apply when `method` is set to `"class"`. If the element already has existing classes, the new class will be appended gracefully without overwriting them.
+
 ## Types
 
-This package provides generic TypeScript definitions out-of-the-box. It correctly types the plugin as a `Plugin<[], Root>` for the `hast` ecosystem.
+This package provides generic TypeScript definitions out-of-the-box. It correctly types the plugin as a `Plugin<[RehypeTableAlignOptions?], Root>` for the `hast` ecosystem.
 
 ## License
 
