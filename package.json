@@ -35,6 +35,14 @@
   ],
   "author": "Chiahong Hong",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChiahongHong/rehype-table-align.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ChiahongHong/rehype-table-align/issues"
+  },
+  "homepage": "https://github.com/ChiahongHong/rehype-table-align#readme",
   "peerDependencies": {
     "unified": "^11.0.0"
   },
